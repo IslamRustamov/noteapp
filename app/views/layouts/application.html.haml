@@ -1,0 +1,21 @@
+!!!
+%html
+%head
+  %title noteapp
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  = csrf_meta_tags
+  = csp_meta_tag
+%body
+  %header
+    .header_inner
+      %nav
+        - if user_signed_in?
+          = link_to "New note", new_note_path
+          = link_to "Sign out", destroy_user_session_path, method: :delete
+        - else
+          = link_to "Log in", new_user_session_path
+  %p.notice= notice
+  %p.alert= alert
+
+  = yield
