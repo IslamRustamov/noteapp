@@ -1,1 +1,32 @@
-%h1 This is welcome placeholder
+#banner
+  .banner_content
+    %h1 Noteapp
+    %p A simple note application
+    %button= link_to "Sign up", new_user_registration_path
+
+#testimonial
+  .wrapper
+    %p.quote "The greatest notebook app"
+    %p.name - Islam
+
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %h2 Notes
+        %p  Some note
+      .callout
+        %h2 Notes 1
+        %p  Some note 1
+      .callout
+        %h2 Notes 2
+        %p  Some note 2
+
+#bottom_cta
+  .wrapper
+  %h2 For REAL
+  %p SIGN UUUUP
+  %button= link_to "Here here", new_user_registration_path
+
+%footer
+  %p &copy; Islam
